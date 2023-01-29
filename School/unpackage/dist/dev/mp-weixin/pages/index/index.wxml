@@ -1,1 +1,0 @@
-<view class="content"><text class="text-center">欢迎登陆小程序</text><button data-event-opts="{{[['tap',[['goToLogin',['$event']]]]]}}" bindtap="__e">goToLogin</button></view>
