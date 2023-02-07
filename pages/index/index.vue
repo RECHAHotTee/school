@@ -13,7 +13,12 @@
 			}
 		},
 		onLoad() {
-
+			uniCloud.callFunction({
+				name: 'login',
+				data: {zh:'123',mm:'123'}
+			}).then(msg=>{
+				console.log('msg',msg);
+			})
 		},
 		methods: {
 			goToLogin(){
