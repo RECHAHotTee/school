@@ -1,0 +1,25 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.button-button-clz.data-v-ab48b5e0 {
+  margin: 3px !important;
+}
+.container.data-v-ab48b5e0 {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 12px;
+}
+.container.data-v-ab48b5e0 {
+  width: 750rpx !important;
+  margin: 0 auto;
+}

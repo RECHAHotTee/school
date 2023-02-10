@@ -1,4 +1,8 @@
 {
-  "navigationBarTitleText": "登录",
-  "usingComponents": {}
+  "navigationBarTitleText": "个人中心",
+  "navigationBarBackgroundColor": "#3d82ff",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "../../uni_modules/diy-uview-ui/components/u-navbar/u-navbar"
+  }
 }

@@ -1,0 +1,26 @@
+/* ==================
+         魔方布局
+ ==================== */
+.custom-cubes {
+  width:100vw !important;
+  position: relative;
+  height:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+
+  .custom-cube-item{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+    .custom-cube-img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

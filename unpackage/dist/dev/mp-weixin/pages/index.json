@@ -1,0 +1,11 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "diy-noticebar": "../components/diy-noticebar/diy-noticebar",
+    "u-input": "../uni_modules/diy-uview-ui/components/u-input/u-input",
+    "u-form-item": "../uni_modules/diy-uview-ui/components/u-form-item/u-form-item",
+    "u-select": "../uni_modules/diy-uview-ui/components/u-select/u-select",
+    "u-form": "../uni_modules/diy-uview-ui/components/u-form/u-form"
+  }
+}

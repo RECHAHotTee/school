@@ -6,9 +6,9 @@
      	{
      		"launchtype" : "local"
      	},
-     	"h5" : 
+     	"mp-weixin" : 
      	{
-     		"launchtype" : "remote"
+     		"launchtype" : "local"
      	},
      	"type" : "uniCloud"
      }

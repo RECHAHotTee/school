@@ -1,4 +1,11 @@
 {
+  "navigationBarTextStyle": "black",
   "navigationBarTitleText": "登录",
-  "usingComponents": {}
+  "usingComponents": {
+    "u-input": "../../uni_modules/diy-uview-ui/components/u-input/u-input",
+    "u-form-item": "../../uni_modules/diy-uview-ui/components/u-form-item/u-form-item",
+    "u-radio": "../../uni_modules/diy-uview-ui/components/u-radio/u-radio",
+    "u-radio-group": "../../uni_modules/diy-uview-ui/components/u-radio-group/u-radio-group",
+    "u-form": "../../uni_modules/diy-uview-ui/components/u-form/u-form"
+  }
 }

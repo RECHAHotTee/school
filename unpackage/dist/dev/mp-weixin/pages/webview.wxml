@@ -1,0 +1,1 @@
+<view class="start"><web-view src="{{a}}"></web-view></view>

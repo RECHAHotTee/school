@@ -1,70 +1,90 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/index",
 			"style": {
+				"navigationBarTextStyle": "black",
 				"navigationBarTitleText": "首页"
 			}
 		},
 		{
 			"path": "pages/login/login",
 			"style": {
+				"navigationBarTextStyle": "black",
 				"navigationBarTitleText": "登录"
 			}
 		},
 		{
 			"path": "pages/study/study",
 			"style": {
-				"navigationBarTitleText": "登录"
-			}
-		},
-		{
-			"path": "pages/relax/relax",
-			"style": {
-				"navigationBarTitleText": "登录"
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "学习"
 			}
 		},
 		{
 			"path": "pages/profile/profile",
 			"style": {
-				"navigationBarTitleText": "登录"
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#3d82ff",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/relax/relax",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "休闲"
+			}
+		},
+		{
+			"path": "pages/manage/manage",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "管理员页面"
+			}
+		},
+		{
+			"path": "pages/webview",
+			"style": {
+				"navigationBarTitleText": ""
 			}
 		}
-
-
 	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "school",
+		"navigationBarBackgroundColor": "#FFFFFF"
+	},
 	"tabBar": {
-		"list": [{
-				"pagePath": "pages/index/index",
-				"text": "首页",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png"
+		"color": "#999999",
+		"selectedColor": "#000000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index",
+				"iconPath": "static/icon11_sy.png",
+				"selectedIconPath": "static/icon11_sy.png",
+				"text": "首页"
 			},
 			{
 				"pagePath": "pages/study/study",
-				"text": "学习",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png"
+				"iconPath": "static/icon11_jfxq.png",
+				"selectedIconPath": "static/icon11_jfxq.png",
+				"text": "学习"
 			},
 			{
 				"pagePath": "pages/relax/relax",
-				"text": "休闲",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png"
+				"iconPath": "static/icon11_cdgl.png",
+				"selectedIconPath": "static/icon11_cdgl.png",
+				"text": "休闲"
 			},
 			{
 				"pagePath": "pages/profile/profile",
-				"text": "我的",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png"
+				"iconPath": "static/icon11_zh.png",
+				"selectedIconPath": "static/icon11_zh.png",
+				"text": "个人中心"
 			}
 		]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
-	"uniIdRouter": {}
+	}
 }

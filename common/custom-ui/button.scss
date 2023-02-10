@@ -1,0 +1,110 @@
+/* ==================
+          按钮
+ ==================== */
+ @import './var.scss';
+
+
+.custom-btn {
+  position: relative;
+  border: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+   border-radius: 0;
+  transform: translate(0px, 0px);
+}
+
+.custom-btn::after {
+  display: none;
+}
+
+.custom-btn:not([class*="bg-"]) {
+  background-color: transparent;
+}
+
+.custom-btn[class*="line"] {
+  background-color: transparent;
+}
+
+.custom-btn[class*="line"]::after {
+  content: " ";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1rpx solid currentColor;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: $custom-radius;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.custom-btn[class*="lines"]::after {
+  border: 6rpx solid currentColor;
+}
+
+.custom-btn[class*="bg-"]::after {
+  display: none;
+}
+
+.custom-btn .custom-btn-icon {
+  border-radius: 500px;
+  padding: 0;
+  margin-right:6rpx;
+  font-size: inherit;
+}
+
+
+.custom-btn.button-hover {
+  transform: translate(1rpx, 1rpx);
+}
+
+.block {
+  display: block;
+}
+
+.custom-btn.block {
+  display: flex;
+  width: 100%;
+}
+
+.custom-btn[disabled] {
+  opacity: 0.6;
+}
+
+@mixin set-button($type) {
+  @if $type == none {
+    .custom-btn {
+      padding: 0 map-get($custom-padding, $type);
+      font-size: map-get($custom-font-sizes, $type);
+      height: map-get($custom-height, $type);
+    }
+    .custom-btn.custom-icon {
+      width: map-get($custom-height, $type);
+      height: map-get($custom-height, $type);
+    }
+  } @else {
+    .custom-btn.#{$type} {
+      padding: 0 map-get($custom-padding, $type);
+      font-size: map-get($custom-font-sizes, $type);
+      height: map-get($custom-height, $type);
+    }
+    .custom-btn.custom-icon.#{$type} {
+      width: map-get($custom-font-sizes, $type);
+      height: map-get($custom-font-sizes, $type);
+    }
+  }
+}
+
+@each $type in $custom-sizes {
+  @include set-button($type);
+}

@@ -1,45 +1,58 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/index",
     "pages/login/login",
     "pages/study/study",
+    "pages/profile/profile",
     "pages/relax/relax",
-    "pages/profile/profile"
+    "pages/manage/manage",
+    "pages/webview"
   ],
-  "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "school",
+    "navigationBarBackgroundColor": "#FFFFFF"
   },
   "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
+        "pagePath": "pages/index",
+        "iconPath": "static/icon11_sy.png",
+        "selectedIconPath": "static/icon11_sy.png",
+        "text": "首页"
       },
       {
         "pagePath": "pages/study/study",
-        "text": "学习",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
+        "iconPath": "static/icon11_jfxq.png",
+        "selectedIconPath": "static/icon11_jfxq.png",
+        "text": "学习"
       },
       {
         "pagePath": "pages/relax/relax",
-        "text": "休闲",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
+        "iconPath": "static/icon11_cdgl.png",
+        "selectedIconPath": "static/icon11_cdgl.png",
+        "text": "休闲"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
+        "iconPath": "static/icon11_zh.png",
+        "selectedIconPath": "static/icon11_zh.png",
+        "text": "个人中心"
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "地理位置信息将用于标记位置"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
   "usingComponents": {}
 }
