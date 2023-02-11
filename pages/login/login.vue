@@ -18,7 +18,7 @@
 				</u-radio-group>
 			</u-form-item>
 			<view class="flex custom-col-24 button-clz">
-				<button class="custom-btn black radius flex-sub margin-xs button-button-clz">登录</button>
+				<button class="custom-btn black radius flex-sub margin-xs button-button-clz" @click="submitForm">登录</button>
 			</view>
 		</u-form>
 		<view class="clearfix"></view>
@@ -80,21 +80,32 @@
 			async submitForm(e) {
 				let valid = await this.$refs.formRef.validate();
 				if (valid) {
-					//保存数据
 					let param = this.form;
+					console.log('param',param);
 					let url = '';
-					if (!url) {
-						this.showToast('请先配置表单提交地址', 'none');
-						return false;
-					}
-
-					let res = await this.$http.post('', param, {}, 'json');
-
-					if (res.code == 200) {
-						this.showToast(res.msg, 'success');
-					} else {
-						this.showModal(res.msg, '提示', false);
-					}
+					uniCloud.callFunction({
+						name:"login",
+						data:{
+							zh:param['usename'],
+							mm:param['password'],
+							type:param['radio']
+						}
+					}).then(msg=>{
+						console.log('msg',msg);
+						if(msg.result.statue==='success') {
+							this.showToast('登录成功', 'success');
+							//全局保存用户信息
+							getApp().globalData.userInfo={zh:param['usename'],mm:param['password'],type:param['radio']}
+							//路由toggle home
+							setTimeout(()=>{
+								uni.switchTab({
+									url: '/pages/index'
+								});
+							},1500)
+							return ;
+						}
+						this.showModal(msg.result.msg, '提示', false);
+					})
 				} else {
 					console.log('验证失败');
 				}
